@@ -1,0 +1,87 @@
+@use "../utils/variable" as *;
+@use "../utils/mixins" as *;
+.contacts {
+  padding-top: 80px;
+  padding-bottom: 41px;
+}
+.contacts_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 28px;
+  @media screen and (max-width: 768px) {
+    display: inline-block;
+  }
+}
+.contacts_icon {
+  border-radius: 16px;
+}
+.contacts_title {
+  font-family: $main-font;
+  max-width: 316px;
+  font-weight: 700;
+  font-size: 48px;
+  margin-bottom: 32px;
+  text-align: center;
+  color: $white-color;
+}
+.contacts_subtitle {
+  max-width: 292px;
+  font-family: $main-font;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  margin: 28px;
+  color: $white-color;
+}
+.contacts_link {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.contacts_list {
+  flex-basis: 292px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.contacts_text {
+  font-family: $main-font;
+  font-weight: 400;
+  font-size: 24px;
+  color: $white-color;
+}
+.inner_social-media {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+.contacts_input {
+  display: block;
+  max-width: 250px;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #4f4f4f;
+}
+.contacts_label {
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 14px;
+
+  color: #4f4f4f;
+}
+.contacts_title-h2 {
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  color: $white-color;
+}
+.contacts_form {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}

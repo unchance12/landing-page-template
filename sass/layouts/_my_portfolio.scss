@@ -1,0 +1,86 @@
+@use "../utils/variable" as *;
+@use "../utils/mixins" as *;
+.portfolio {
+  padding-top: 48px;
+  padding-bottom: 80px;
+}
+
+.portfolio_title {
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 48px;
+  color: $white-color;
+}
+.portfolio_subtitle {
+  font-family: $main-font;
+  font-weight: 400;
+  font-size: 18px;
+  max-width: 576px;
+  margin-top: 16px;
+  margin-bottom: 64px;
+  color: $white-color;
+}
+.portfolio_list {
+  border-radius: 16px;
+
+  height: 400px;
+  background: $white-color;
+  overflow: hidden;
+  @media screen and (max-width: 768px) {
+    margin-top: 20px;
+  }
+}
+.portfolio_title-project {
+  font-family: $main-font;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  padding-top: 16px;
+  padding-left: 24px;
+  color: $b-color;
+}
+.portfolio_text-project {
+  font-family: $main-font;
+  max-width: 300px;
+  font-weight: 400;
+  font-size: 12px;
+  padding: 8px 24px;
+  text-align: justify;
+  color: $g-color;
+}
+.portfolio_thumb {
+  position: relative;
+}
+.portfolio_item {
+  border-radius: 8px;
+
+  padding: 8px 10px;
+  padding: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: $decorative-color;
+}
+.portfolio_link {
+  font-family: $main-font;
+  padding-left: 24px;
+  padding-right: 24px;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: justify;
+  color: $white-color;
+}
+.portfolio_wrapper {
+  display: flex;
+
+  align-items: center;
+  @media screen and (min-width: 768px) {
+    justify-content: space-between;
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}

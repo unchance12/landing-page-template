@@ -1,0 +1,47 @@
+@use "../utils/variable" as *;
+@use "../utils/mixins" as *;
+// @keyframes ava {
+// //   from {
+// //     transform: rotate(0deg);
+// //   }
+// //   to {
+// //     transform: rotate(360deg);
+// //   }
+// // }
+
+.text-container {
+  width: 189px;
+  margin: 50px auto;
+}
+.hero__subtitle {
+  font-family: $main-font;
+  font-weight: 500;
+  font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  color: $gray-color;
+  animation: typing1 4s steps(60, end) infinite;
+}
+.hero_animation {
+  animation: ava 10s linear 0s infinite;
+}
+
+.text-container p {
+  animation: typing 8s steps(60, end) infinite;
+}
+@keyframes typing1 {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes typing {
+  0%,
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 100;
+  }
+}

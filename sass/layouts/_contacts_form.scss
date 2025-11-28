@@ -1,0 +1,72 @@
+@use "../utils/variable" as *;
+@use "../utils/mixins" as *;
+.textarea {
+  border: 1px solid #4f4f4f;
+  border-radius: 8px;
+  width: 480px;
+  height: 109px;
+  background-color: transparent;
+  resize: none;
+  @media screen and (max-width: 425px) {
+    width: 250px;
+  }
+}
+
+.form_row {
+  display: flex;
+
+  
+  max-width: 570px;
+  margin-bottom: 47px;
+  gap: 70px;
+  @media screen and (max-width: 425px) {
+    max-width: 250px;
+    flex-direction: column;
+  }
+}
+
+.form__input {
+  position: relative;
+}
+
+.contacts_label {
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  transition: transform 0.2s linear;
+}
+
+.contacts_input {
+  color: white;
+}
+
+.contacts_input:focus {
+  outline: none;
+}
+
+.contacts_input:focus + .contacts_label,
+.contacts_input:not(:placeholder-shown) + .contacts_label {
+  transform: translateY(-20px);
+  font-size: 12px;
+  color: $decorative-color;
+}
+.submit {
+  background-color: $decorative-color;
+  border-radius: 8px;
+  max-width: 143px;
+  padding: 12px 32px;
+
+  @media screen and (max-width: 768px) {
+    display: inline-block;
+    width: 100%;
+  }
+}
+.contacts_but {
+  display: block;
+  width: 100%;
+  font-family: $main-font;
+  font-weight: 500;
+  font-size: 14px;
+  white-space: nowrap;
+  color: $white-color;
+}

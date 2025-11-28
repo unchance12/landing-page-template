@@ -1,0 +1,122 @@
+@use "../utils/variable" as *;
+@use "../utils/mixins" as *;
+.about {
+  padding-top: 52px;
+  padding-bottom: 48px;
+}
+.about_wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+  margin-top: 56px;
+  @media screen and (max-width: 1240px) {
+    flex-direction: column;
+  }
+}
+.about_title {
+  font-family: $main-font;
+  margin-bottom: 16px;
+  font-weight: 700;
+  font-size: 48px;
+  text-align: center;
+  color: $white-color;
+}
+.about_descr {
+  font-family: $main-font;
+  margin: 0 auto;
+  max-width: 576px;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  color: $white-color;
+}
+.about_img {
+  border-radius: 16px;
+  width: 400px;
+  height: 236px;
+  margin-bottom: 50px;
+  @media screen and (min-width: 768px) {
+    width: 560px;
+    height: 396px;
+  }
+}
+.about_right-side {
+  max-width: 560px;
+}
+
+.about_paragraph-first {
+  font-family: $main-font;
+  font-weight: 600;
+  max-width: 560px;
+  font-size: 18px;
+  align-items: center;
+  text-align: justify;
+  color: $white-color;
+}
+.about_paragraph-secondary {
+  margin-top: 32px;
+  font-family: $main-font;
+  font-weight: 400;
+  font-size: 18px;
+  align-items: center;
+  text-align: justify;
+  color: $white-color;
+}
+.about_action-link {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 12px 34px;
+  font-family: $main-font;
+  font-weight: 500;
+  font-size: 14px;
+  color: $white-color;
+  border: 1px solid $w-color;
+  border-radius: 8px;
+  margin-top: 56px;
+
+  @media screen and (min-width: 1240px) {
+    width: auto;
+  }
+}
+.about_wrapper-code {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  margin-top: 64px;
+  @media screen and (max-width: 1240px) {
+    flex-direction: column;
+  }
+}
+.about_icon {
+  background-color: $bg-color;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.asd {
+  width: 200px;
+}
+.about_title-code {
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 32px;
+  color: $white-color;
+}
+.about_text-code {
+  font-family:$main-font;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 8px;
+  width: 200px;
+  color: $white-color;
+}

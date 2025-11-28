@@ -1,0 +1,39 @@
+@use "../utils/variable" as *;
+@use "../utils/mixins" as *;
+.ab {
+  display: flex;
+  gap: 16px;
+  padding-bottom: 18px;
+}
+.footer_text {
+  font-family: $main-font;
+  font-weight: 500;
+  font-size: 14px;
+  color: $wh-color;
+}
+
+.social_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: $decorative-color;
+  border-radius: 50%;
+  transition: background-color 0.3s easy;
+}
+.social_link:hover {
+  background-color: purple;
+}
+.footer {
+  padding-top: 41px;
+  padding-bottom: 32px;
+}
+.footer_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media screen and (max-width: 425px) {
+    flex-direction: column;
+  }
+}

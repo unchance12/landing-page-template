@@ -1,0 +1,100 @@
+@use "../utils/variable" as *;
+@use "../utils/mixins" as *;
+.header__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.header {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: $decorative-color;
+  @media screen and (max-width: 425px) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+.logo {
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 36px;
+  color: $white-color;
+  text-transform: uppercase;
+}
+
+.navigation-menu {
+  display: flex;
+  gap: 32px;
+  @media screen and (min-width: 1024px) {
+    margin-left: auto;
+  }
+}
+
+.navigation-menu__link {
+  font-family: $main-font;
+  font-weight: 500;
+  font-size: 18px;
+  color: $white-color;
+}
+.body {
+  background-color: $bg-color;
+  color: white;
+  transition: background-color 0, 3s linear, color 0.3s linear;
+}
+.body:has(#theme-toggle:checked) {
+  background-color: rgba(167, 167, 167, 0.664);
+  --white-color: black;
+}
+.old-toggle {
+  opacity: 0;
+  overflow: hidden;
+}
+.new-toggle {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  background-color: black;
+  border-radius: 24px;
+}
+.new-toggle::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: $decorative-color;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.4s linear;
+}
+.old-toggle:checked + .new-toggle::before {
+  transform: translateX(26px);
+}
+input[type="checkbox"]:checked + .new-toggle {
+  background-color: white;
+}
+.wrapper-toggle {
+  position: relative;
+  @media screen and (min-width: 1024px) {
+    margin-left: 32px;
+  }
+}
+.old-toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

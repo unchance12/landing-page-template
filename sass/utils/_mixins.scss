@@ -1,0 +1,18 @@
+@mixin phonr{
+    @media screen and (min-width:480px) {
+        @content;
+        
+    }
+}
+@mixin tablet{
+    @media screen and (min-width:768px) {
+        @content;
+        
+    }
+}
+@mixin dekstop{
+    @media screen and (min-width:1240px) {
+        @content;
+        
+    }
+}
